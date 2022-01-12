@@ -27,8 +27,9 @@ function App() {
     <Form.Label>Make your todo list</Form.Label>
     <Form.Control type="data" onChange={(e)=>INPUT(e.target.value)}  placeholder="Enter todo item" />
     <Button  variant="secondary" onClick={UPDATE}>Submit </Button>
-    <div>
-      {addedlist.map((list,key) => <li key={key}>{list}</li>)}
+    <div > Your todo list for today is: <ol>
+      {addedlist.map((list,key) => <li  key={key}> <p className="list">{list} </p></li>)}
+      </ol> 
     </div>
 </Form.Group>
 
